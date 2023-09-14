@@ -13,6 +13,8 @@ fn main() {
         .read_line(&mut guess)
         .expect("Failed to read line");
 
+    println!("You guessed: {guess}");
+
     let guess: u32 = guess
         .trim()
         .parse()
@@ -23,6 +25,4 @@ fn main() {
         Ordering::Equal => println!("You guessed right!"),
         Ordering::Greater => println!("Too high!")
     }
-
-    println!("Your guess: {guess}");
 }
